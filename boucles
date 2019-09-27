@@ -1,0 +1,71 @@
+Les boucles demandent à PHP de répéter des instructions plusieurs fois.
+
+
+
+
+while : à utiliser de préférence lorsqu'on ne sait pas par avance combien de fois la boucle doit être répétée ;
+
+exemple :
+        <?php
+            while ($continuer_boucle == true)
+          {
+                // instructions à exécuter dans la boucle
+          }
+        ?>
+
+
+
+
+
+
+for : à utiliser lorsqu'on veut répéter des instructions un nombre précis de fois.
+
+exemple :
+
+        
+        <?php
+        for ($nombre_de_lignes = 1; $nombre_de_lignes <= 100; $nombre_de_lignes++)
+        {
+             echo 'Ceci est la ligne n°' . $nombre_de_lignes . '<br />';
+        }
+        ?>
+
+
+
+
+
+foreach est une fonction PHP très pratique. Elle est utilisable pour parcourir un tableau[c'est quoi?] 
+(ou les membres d'un objet[c'est quoi?]). Il est ainsi possible d'afficher l'ensemble des éléments d'un tableau 
+et les clés associées de la façon suivante:
+
+<?php
+foreach ($tableau as $cle => $valeur) {
+echo $cle.' - '.$valeur.'<br />'."\n";
+}
+                ?>
+
+
+
+
+ou si l'on n'a pas besoin de connaitre les clés
+<?php
+foreach ($tableau as $valeur) {
+    echo $valeur.'<br />'."\n";
+}
+?>
+
+
+Do ... while
+
+L'instruction do est associée au terme while (qui est parfois baptisé until dans d'autres langages que PHP). 
+Elle est similaire à la boucle while à ceci près que les instructions sont exécutées au moins une fois, 
+la condition n'étant testé pour la première fois qu'après exécution des instructions.
+
+          <?php
+            $i = 5;
+            do {
+              echo $i;
+            $i++;
+                } while ($i<9);
+            ?>
+
